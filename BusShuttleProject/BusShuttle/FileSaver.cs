@@ -12,4 +12,8 @@ public class FileSaver {
     public void AppendLine(string line) {
         File.AppendAllText(this.fileName, line + Environment.NewLine);
     }
+
+    public void AppendData(PassengerData data){
+        File.AppendAllText(this.fileName, data.Driver + ": " + data.Loop + ": " + data.Stop + ": " + data.Boarded + Environment.NewLine);
+    }
 }
