@@ -6,5 +6,4 @@ class Program
         ConsoleUI theUI = new ConsoleUI();
         theUI.Show();
     }
-
 }
