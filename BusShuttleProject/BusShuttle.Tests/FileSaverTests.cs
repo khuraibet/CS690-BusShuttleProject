@@ -22,7 +22,7 @@ public class FileSaverTests
         Assert.Equal("Hello, World!" + Environment.NewLine, contentFromFile);
     }
 
-        [Fact]
+    [Fact]
     public void Test_FileSaver_AppendData() 
     {
         Stop sampleStop = new Stop("MyStop");
