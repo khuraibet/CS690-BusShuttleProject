@@ -16,6 +16,6 @@ public class FileSaver {
     }
 
     public void AppendData(PassengerData data){
-        File.AppendAllText(this.fileName, data.Driver + ": " + data.Loop + ": " + data.Stop + ": " + data.Boarded + Environment.NewLine);
+        File.AppendAllText(this.fileName, data.Driver + ":" + data.Loop + ":" + data.Stop + ":" + data.Boarded + Environment.NewLine);
     }
 }
