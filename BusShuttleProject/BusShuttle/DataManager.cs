@@ -33,6 +33,26 @@ public class DataManager {
         Drivers.Add(new Driver("Heather Khuraibet"));
 
         PassengerData = new List<PassengerData>();
+
+        if(File.Exists("passenger-data.txt")) {
+            var passengerFileContent = File.ReadAllLines("passenger-data.txt");
+
+            foreach(var line in passengerFileContent) {
+                var splitted = line.Split(":", StringSplitOptions.RemoveEmptyEntries);
+                var driverName = splitted[0];
+                var driver = new Driver(driverName);
+
+                var loopName = splitted[1];
+                var loop = new Loop(loopName);
+
+                var stopName = splitted[2];
+                var stop = new Stop(stopName);
+
+                var boarded = int.Parse(splitted[3]);
+
+                PassengerData.Add(new PassengerData(boarded, stop, loop, driver));
+            }
+        }
     }
 
     public void AddNewPassengerData(PassengerData data) {

@@ -32,6 +32,6 @@ public class FileSaverTests
 
         fileSaver.AppendData(sampleData);
         var contentFromFile = File.ReadAllText(testFileName);
-        Assert.Equal("Sample: MyLoop: MyStop: 5" + Environment.NewLine, contentFromFile);
+        Assert.Equal("Sample:MyLoop:MyStop:5" + Environment.NewLine, contentFromFile);
     }
 }
